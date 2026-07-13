@@ -1,0 +1,26 @@
+{
+  "name": "nodejs-express-template",
+  "version": "1.0.0",
+  "description": "Repository Template for NodeJS + Express.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "app": "node --watch app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/caojieming/nodejs-express-template.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/caojieming/nodejs-express-template/issues"
+  },
+  "homepage": "https://github.com/caojieming/nodejs-express-template#readme",
+  "dependencies": {
+    "ejs": "^6.0.1",
+    "express": "^5.2.1"
+  }
+}

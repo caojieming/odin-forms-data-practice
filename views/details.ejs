@@ -1,0 +1,18 @@
+<html>
+  <head>
+    <!-- set styling file -->
+    <link rel="stylesheet" href="/styles.css">
+    <title>Details</title>
+  </head>
+  <body>
+    <a href="/"><button>Back to Mini Messageboard</button></a>
+
+    <h1><%= title %></h1>
+
+    <p>Message Contents: <%= message.text %></p>
+    <p>Posted by: <%= message.user %></p>
+    <p>Datetime added: <%= message.added %></p>
+    
+    <%- include('footer') %>
+  </body>
+</html>

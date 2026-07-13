@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <!-- set styling file -->
+    <link rel="stylesheet" href="/styles.css">
+    <title>Homepage</title>
+  </head>
+  <body>
+    <h1><%= title %></h1>
+
+    <a href="/new"><button>Add new message</button></a>
+
+    <% for (let i = 0; i < messages.length; i++) { 
+      curUser = messages[i]; %>
+      <p>
+        <a href="/details/<%= i %>"><button>See Details!</button></a>
+        <%= `[${curUser.added}] ${curUser.user}: ${curUser.text}` %>
+      </p>
+    <% } %>
+
+    <%- include('footer') %>
+  </body>
+</html>
