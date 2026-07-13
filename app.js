@@ -3,6 +3,8 @@ try {
   process.loadEnvFile();
 } catch(error) {}
 
+// express validator package import
+const { body, validationResult } = require("express-validator");
 
 // standard express import
 const express = require("express");
