@@ -92,3 +92,24 @@ exports.usersDeletePost = (req, res) => {
   usersStorage.deleteUser(req.params.id);
   res.redirect("/");
 };
+
+
+exports.usersSearchGet = (req, res) => {
+  const allUsers = usersStorage.getUsers();
+  const inFirstName = req.query.firstName;
+  const inLastName = req.query.lastName;
+  const inEmail = req.query.email;
+  let foundUsers = [];
+
+  // iterate through allUsers, searching for equalities in firstName, lastName, or email
+  allUsers.forEach(function (curUser) {
+    if(curUser.firstName === inFirstName || curUser.lastName === inLastName || curUser.email === inEmail) {
+      foundUsers.push(curUser);
+    }
+  });
+
+  res.render("search", {
+    title: "Found Users",
+    foundUsers: foundUsers,
+  });
+};

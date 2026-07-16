@@ -2,7 +2,8 @@
 class UsersStorage {
   constructor() {
     this.storage = {};
-    this.id = 0;
+    this.storage[0] = { id: 0, firstName: "John", lastName: "Doe", email: "jdoe@abc.xyz", age: 20, bio: "yeet" };
+    this.id = 1;
   }
 
   addUser({ firstName, lastName, email, age, bio}) {
